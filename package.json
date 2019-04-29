@@ -12,12 +12,13 @@
   "version": "0.1.0",
   "main": "dist/main.js",
   "scripts": {
+    "start": "npm run serve",
+    "serve": "vue-cli-service serve src/demo.ts",
     "build": "vue-cli-service build src/main.ts --target lib --name main --formats commonjs",
     "postbuild": "node -e \"require('fs').renameSync('dist/main.common.js', 'dist/main.js')\" && node -e \"require('fs').renameSync('dist/main.common.js.map', 'dist/main.js.map')\"",
-    "watch": "vue-cli-service build src/main.ts --target lib --name main --formats commonjs --mode development --watch",
+    "watch": "vue-cli-service build src/main.ts --target lib --name main --formats commonjs --watch",
     "build:demo": "vue-cli-service build src/demo.ts --mode development --dest dist-demo",
-    "watch:demo": "vue-cli-service build src/demo.ts --watch --mode development --dest dist-demo",
-    "serve": "vue-cli-service serve src/demo.ts"
+    "watch:demo": "vue-cli-service build src/demo.ts --watch --mode development --dest dist-demo"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
