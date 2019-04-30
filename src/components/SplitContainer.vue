@@ -120,7 +120,7 @@ export default Vue.extend({
 	--border-width: 1px;
 	--splitter-width: 5px;
 	--split: 200px;
-	--default-backcolor: var(--base-bg);
+	--default-backcolor: var(--base-bg-color);
 	--position-duration: var(--base-duration);
 	
 	position: relative;

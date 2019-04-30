@@ -6,6 +6,10 @@
       </div>
       <div  slot='split2'>
         <h3 class='header'>Soot Demo</h3>
+        <div style="position: relative; width: 200px; height: 200px; text-align: center">
+          Preloader
+          <preloader></preloader>
+        </div>
       </div>
     </split-container>
   </div>
@@ -14,10 +18,14 @@
 <script lang="ts">
 import Vue from 'vue';
 import SplitContainer from './SplitContainer.vue';
+import Preloader from './Preloader.vue';
 
 export default Vue.extend({
   name: 'Demo',
-  components: { SplitContainer }
+  components: {
+    SplitContainer,
+    Preloader
+  }
 });
 </script>
 
@@ -34,7 +42,7 @@ export default Vue.extend({
 }
 
 body {
-  background: var(--base-bg);
+  background: var(--base-bg-color);
   color: #FFF;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
@@ -51,6 +59,6 @@ body {
 
 .header {
   text-align: center;
-  padding-top: 15px;
+  padding: 25px 0;
 }
 </style>
