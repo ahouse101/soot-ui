@@ -1,15 +1,15 @@
 <template>
-  <div class=''>
-    
-  </div>
+	<div class=''>
+		
+	</div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'Example',
-  components: {  }
+	name: 'Example',
+	components: {  }
 });
 </script>
 

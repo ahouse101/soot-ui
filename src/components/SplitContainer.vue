@@ -34,7 +34,7 @@ export default Vue.extend({
 		FontAwesomeIcon
 	},
 	props: {
-		initialSplitPosition: {
+		initialSplit: {
 			type: Number,
 			default: 200
 		},
@@ -52,7 +52,7 @@ export default Vue.extend({
 		return {
 			isResizing: false,
 			isCollapsed: this.collapsed,
-			splitPosition: this.initialSplitPosition,
+			splitPosition: this.initialSplit,
 			hoverTimeout: null
 		};
 	},
