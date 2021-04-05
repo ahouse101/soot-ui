@@ -1,41 +1,42 @@
 {
-  "name": "soot-ui",
-  "author": "Alex House",
-  "description": "A set of a UI components for Vue apps, with a focus on desktop usability and dark design.",
-  "keywords": [
-    "vue",
-    "dark",
-    "ui",
-    "components",
-    "desktop"
-  ],
-  "version": "0.1.0",
-  "main": "dist/main.js",
-  "scripts": {
-    "start": "npm run serve",
-    "serve": "vue-cli-service serve src/demo.ts",
-    "build": "vue-cli-service build src/main.ts --target lib --name main --formats commonjs",
-    "postbuild": "node -e \"require('fs').renameSync('dist/main.common.js', 'dist/main.js')\" && node -e \"require('fs').renameSync('dist/main.common.js.map', 'dist/main.js.map')\"",
-    "watch": "vue-cli-service build src/main.ts --target lib --name main --formats commonjs --watch",
-    "build:demo": "vue-cli-service build src/demo.ts --mode development --dest dist-demo",
-    "watch:demo": "vue-cli-service build src/demo.ts --watch --mode development --dest dist-demo"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-solid-svg-icons": "^5.8.1",
-    "@fortawesome/vue-fontawesome": "^0.1.6",
-    "vue": "^2.6.10"
-  },
-  "devDependencies": {
-    "@types/node": "^11.13.7",
-    "@vue/cli-plugin-typescript": "^3.6.0",
-    "@vue/cli-service": "^3.6.0",
-    "sass": "^1.19.0",
-    "sass-loader": "^7.1.0",
-    "typescript": "^3.4.5",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "browserslist": [
-    "node 10"
-  ]
+	"name": "soot-ui",
+	"author": "Alex House",
+	"description": "A set of a UI components for Vue apps, with a focus on desktop usability and dark design.",
+	"keywords": [
+		"vue",
+		"dark",
+		"ui",
+		"components",
+		"desktop"
+	],
+	"version": "0.1.5",
+	"main": "dist/main.js",
+	"scripts": {
+		"postinstall": "npm run build",
+		"start": "npm run serve",
+		"serve": "vue-cli-service serve src/demo.ts",
+		"build": "vue-cli-service build src/main.ts --target lib --name main --formats commonjs",
+		"postbuild": "node -e \"require('fs').renameSync('dist/main.common.js', 'dist/main.js')\" && node -e \"require('fs').renameSync('dist/main.common.js.map', 'dist/main.js.map')\"",
+		"watch": "vue-cli-service build src/main.ts --target lib --name main --formats commonjs --watch",
+		"build:demo": "vue-cli-service build src/demo.ts --mode development --dest dist-demo",
+		"watch:demo": "vue-cli-service build src/demo.ts --watch --mode development --dest dist-demo"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.17",
+		"@fortawesome/free-solid-svg-icons": "^5.8.1",
+		"@fortawesome/vue-fontawesome": "^0.1.6",
+		"vue": "^2.6.10"
+	},
+	"devDependencies": {
+		"@types/node": "^11.13.7",
+		"@vue/cli-plugin-typescript": "^3.6.0",
+		"@vue/cli-service": "^3.6.0",
+		"sass": "^1.19.0",
+		"sass-loader": "^7.1.0",
+		"typescript": "^3.4.5",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"browserslist": [
+		"node 10"
+	]
 }
