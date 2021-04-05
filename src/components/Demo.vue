@@ -5,12 +5,17 @@
 			<h3 class='header' slot='center'>Soot Demo</h3>
 			<toolbar-dropdown slot='right' :choices='[ "Option 1", "Option 2" ]' title='Toolbar-specific dropdown component'>Dropdown</toolbar-dropdown>
 		</toolbar>
-		<split-container style='margin-top: 38px'>
+		<split-container
+			:minimumWidth='150'
+			:maximumWidth='500'
+			:initialSplit='350'
+			style='margin-top: 38px'
+		>
 			<div class='sidebar' slot='split1'>
 				<p>The demo is wrapped in a SplitContainer. You can move the split point to resize the panels, or collapse the left panel to close this message.</p>
 			</div>
-			<div slot='split2' style='padding-top: 10px'>
-				<div style="position: relative; width: 200px; height: 200px; text-align: center">
+			<div slot='split2' style='padding-top: 10px; height: 100%; width: 100%;'>
+				<div style="position: relative; width: 200px; height: 200px; text-align: center; margin: 200px auto">
 					Preloader
 					<preloader></preloader>
 				</div>

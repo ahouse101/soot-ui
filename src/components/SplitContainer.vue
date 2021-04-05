@@ -46,6 +46,14 @@ export default Vue.extend({
 		splitterWidth: {
 			type: Number,
 			default: 4
+		},
+		minimumWidth: {
+			type: Number,
+			default: null
+		},
+		maximumWidth: {
+			type: Number,
+			default: null
 		}
 	},
 	data: function() {
@@ -84,15 +92,20 @@ export default Vue.extend({
 	methods: {
 		startResizing: function(e) {
 			if (!this.isCollapsed) this.isResizing = true;
+			e.preventDefault();
 		},
 		resize: function(e) {
 			if (this.isResizing) {
 				e.preventDefault();
-				this.splitPosition = e.clientX - this.splitterWidth / 2;
+				let newSize = e.clientX - this.splitterWidth / 2;
+				if (this.minimumWidth && newSize < this.minimumWidth) return;
+				if (this.maximumWidth && newSize > this.maximumWidth) return;
+				this.splitPosition = newSize;
 			}
 		},
 		stopResizing: function(e) {
 			this.isResizing = false;
+			e.preventDefault();
 		},
 		startHover: function(e) {
 			clearTimeout(this.hoverTimeout);
