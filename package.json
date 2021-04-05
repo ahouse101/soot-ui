@@ -1,13 +1,12 @@
 {
 	"name": "soot-ui",
 	"author": "Alex House",
-	"description": "A set of a UI components for Vue apps, with a focus on desktop usability and dark design.",
+	"description": "A set of dark UI components for Vue 2 apps.",
 	"keywords": [
 		"vue",
 		"dark",
 		"ui",
-		"components",
-		"desktop"
+		"components"
 	],
 	"version": "0.1.7",
 	"main": "dist/main.js",
