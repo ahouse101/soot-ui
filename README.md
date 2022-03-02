@@ -1,8 +1,9 @@
 # soot-ui
+Archive notice: This project is being archived and will receive no further updates, either for features or security. It is recommended not to use these components in a production application.
+
 A set of dark UI components for Vue 2 apps. Includes a demo in the repo with an example of all components.
 Not currently compatible with vue-cli-service >=v4.0.0 - designed for use in projects with v3.6.0.
 
-Still in early development.
 
 ### Working with the repository
 ```
